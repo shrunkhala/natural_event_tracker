@@ -1,0 +1,72 @@
+// ======================================
+//  Header
+// ======================================
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  background-color: color(bg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    @include media(lrg) {
+      justify-content: space-between;
+    }
+  }
+
+  &-button {
+    padding: 1rem;
+    @include media(lrg) {
+      padding: 2rem;
+    }
+  }
+  &-logo {
+    display: none;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    h2 {
+      display: none;
+    }
+    svg {
+      padding: 0;
+      fill: #fff;
+      width: 6rem;
+      height: 6rem;
+    }
+    @include media(med) {
+      display: flex;
+    }
+    @include media(lrg) {
+      h2 {
+        display: block;
+        font-size: 1.4rem;
+      }
+    }
+    @include media(sup) {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &-button-container {
+    display: flex;
+  }
+}
+
+.header-title {
+  color: #fff;
+  margin: auto;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}

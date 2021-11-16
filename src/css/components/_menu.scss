@@ -1,0 +1,42 @@
+.StyledMenu {
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../../img/stars.webp);
+  background-color: color(bg-dark);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+
+  @include media(med) {
+    width: 35rem;
+  }
+
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+    @include media(med) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+.closed {
+  transform: translateX(100%);
+}

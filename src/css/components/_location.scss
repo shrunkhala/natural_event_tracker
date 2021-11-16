@@ -1,0 +1,64 @@
+// ======================================
+//  Location Markers & Info
+// ======================================
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+.fireIcon,
+.stormIcon,
+.volcanoIcon {
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 0;
+  animation: 0.2s ease-in 0s 1 fadeIn;
+}
+
+.location-markerInfo {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 300px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+  animation: 0.2s ease-in 0s 1 fadeIn;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 1rem 0rem;
+    max-width: 350px;
+    height: auto;
+  }
+  @include media(med) {
+    width: 400px;
+  }
+}
+
+.location-button {
+  border-radius: 5px;
+}
+
+.stormIcon {
+  color: color(storm);
+}
+
+.fireIcon {
+  color: color(fire);
+}
+
+.volcanoIcon {
+  color: color(volcano);
+}
